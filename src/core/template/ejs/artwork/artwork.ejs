@@ -12,7 +12,7 @@
 <%
 let artwork = locals.artwork || {} ;
 let size = "";
-let classes = locals.classes || [];
+let classes = artwork.classes || [];
 classes.push(prefix + '-artwork');
 if (artwork.accent) classes.push(prefix + '-artwork--' + artwork.accent);
 %>
@@ -29,7 +29,7 @@ if (artwork.accent) classes.push(prefix + '-artwork--' + artwork.accent);
     break;
 } %>
 
-<svg <%- includeClasses(classes) %> <%- size %>>
+<svg aria-hidden="true" <%- includeClasses(classes) %> <%- size %>>
   <use class="<%= prefix %>-artwork-decorative" xlink:href="<%= relativeRoot %>dist/artwork/<%= artwork.name %>.svg#artwork-decorative"></use>
   <use class="<%= prefix %>-artwork-minor" xlink:href="<%= relativeRoot %>dist/artwork/<%= artwork.name %>.svg#artwork-minor"></use>
   <use class="<%= prefix %>-artwork-major" xlink:href="<%= relativeRoot %>dist/artwork/<%= artwork.name %>.svg#artwork-major"></use>
