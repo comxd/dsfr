@@ -3,7 +3,6 @@ const { buildScript } = require('./scripts');
 const { buildExample } = require('./example');
 const { concatenate } = require('../generate/concatenate');
 const { copyImages, copyIcons, copyAssets } = require('./copy');
-const { getPackages } = require('../utilities/config');
 const global = require('../../package.json');
 const log = require('../utilities/log');
 const testPa11y = require('../test/pa11y');
